@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Talon's Site</title>
+        <link href = "./style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Roboto|Ubuntu|Silkscreen|Electrolize|Righteous|Bungee">
+
+        <div class="fixed-header">
+            <a class="header-link" href="home.html">Home</a>
+            <a class="header-link" href="about_me.html">About Me</a>
+            <a class="header-link" href="about_site.html">About This Site</a>
+            <a class="header-link" href="academics.html">Academics</a>
+            <a class="header-link" href="coding.html">Coding</a>
+            <a class="header-link" href="contact.html">Contact Me</a>
+        </div>
+    </head>
+    
+    <body>
+        <h1 id="welcome_message"></h1>
+        <p id="description_message">My name is Talon Couture, but online I go by the username of DragonArrow9.</p>
+
+        <script>
+            var i = 0;
+            var txt = "Welcome To Talon's Website!";
+            var speed = 70;
+
+            typeWriter();
+
+            function typeWriter(){
+                if (i < txt.length) {
+                    document.getElementById("welcome_message").innerHTML += txt.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                }
+            }
+
+        </script>
+
+        <img id="index_image" style="margin-top: 5%; margin-bottom: 5%; border: none; width:15%;" src="images/cube.png">
+
+        <script>
+
+            var image = document.getElementById("index_image");
+            var value = "cube";
+            image.onclick = function(e) {
+                if (value == "cube") {
+                    image.src="images/chess_piece.png"
+                    value = "chess"
+                }
+                else {
+                    image.src="images/cube.png"
+                    value="cube"
+                }
+            }
+
+
+        </script>
+    </body>
+
+    <section style="position:absolute; top:40%; left:50%; transform:translate(-50%, 0)">
+        <h2>Quick Links</h2>
+        <p>Github: <a href="https://github.com/DragonArrow9" target="_blank">https://github.com/DragonArrow9</a></p>
+
+    </section>
+    
+</html>
